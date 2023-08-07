@@ -2,6 +2,8 @@
 const { body } = document;
 const canvas = document.createElement("canvas");
 const context = canvas.getContext("2d");
+const socket = io("http://localhost:3000");
+let paddleIndex = 0;
 const width = 500;
 const height = 700;
 const screenWidth = window.screen.width;
