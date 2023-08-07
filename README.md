@@ -16,5 +16,7 @@ To Run on local setup:
 
    ![image](https://github.com/whynesspower/pong-an-arcade-game/assets/77494053/f5cd11d3-32e3-4c27-bf01-2a88e40101fb)
 
+![image](https://github.com/whynesspower/pong-an-arcade-game/assets/77494053/d16c12fa-6293-43c5-aec1-c68c4ac0d5f0)
+
 Caption: 
 One person playing on desktop, Another in mobile phone
