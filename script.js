@@ -90,14 +90,6 @@ function createCanvas() {
   renderCanvas();
 }
 
-// Reset Ball to Center
-function ballReset() {
-  ballX = width / 2;
-  ballY = height / 2;
-  speedY = -3;
-  paddleContact = false;
-}
-
 // Adjust Ball Movement
 function ballMove() {
   // Vertical Speed
@@ -158,6 +150,24 @@ function ballBoundaries() {
       playerScore++;
     }
   }
+}
+
+function showGameOverEl(winner) {
+  // Hide Canvas
+  canvas.hidden = true;
+  // Container
+  gameOverEl.textContent = "";
+  gameOverEl.classList.add("game-over-container");
+  // Title
+  const title = document.createElement("h1");
+  title.textContent = `${winner} Wins!`;
+  // Button
+  const playAgainBtn = document.createElement("button");
+  playAgainBtn.setAttribute("onclick", "startGame()");
+  playAgainBtn.textContent = "Play Again";
+  // Append
+  gameOverEl.append(title, playAgainBtn);
+  body.appendChild(gameOverEl);
 }
 
 // Check If One Player Has Winning Score, If They Do, End Game
