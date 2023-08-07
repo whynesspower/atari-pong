@@ -90,6 +90,14 @@ function createCanvas() {
   renderCanvas();
 }
 
+// Reset Ball to Center
+function ballReset() {
+  ballX = width / 2;
+  ballY = height / 2;
+  speedY = -3;
+  paddleContact = false;
+}
+
 // Adjust Ball Movement
 function ballMove() {
   // Vertical Speed
@@ -148,6 +156,17 @@ function ballBoundaries() {
       // Reset Ball, add to Player Score
       ballReset();
       playerScore++;
+    }
+  }
+}
+
+// Computer Movement
+function computerAI() {
+  if (playerMoved) {
+    if (paddleTopX + paddleDiff < ballX) {
+      paddleTopX += computerSpeed;
+    } else {
+      paddleTopX -= computerSpeed;
     }
   }
 }
