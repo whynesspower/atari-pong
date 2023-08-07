@@ -1,9 +1,14 @@
-const server = require("http").createServer();
-const io = require("socket.io")(server);
+const http = require('http');
+const io = require('socket.io');
+
+const apiServer = require('./api');
+const httpServer = http.createServer(apiServer);
+const socketServer = io(httpServer);
+
+const sockets = require('./sockets');
 
 const PORT = 3000;
+httpServer.listen(PORT);
+console.log(`Listening on port ${PORT}...`);
 
-server.listen(PORT);
-console.log(`Listeing on port ${3000}`);
-
-io.on("connections", (socket) => {});
+sockets.listen(socketServer);
