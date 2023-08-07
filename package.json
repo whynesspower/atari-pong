@@ -1,0 +1,22 @@
+{
+  "name": "pong-an-arcade-game",
+  "version": "1.0.0",
+  "description": "At commit #8275950cbcd9f42239e0ab628a4cbb58bddb86e8\r Single player, Pong game with computer playing as the opponent is completed",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/whynesspower/pong-an-arcade-game.git"
+  },
+  "author": "whynesspower",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/whynesspower/pong-an-arcade-game/issues"
+  },
+  "homepage": "https://github.com/whynesspower/pong-an-arcade-game#readme",
+  "dependencies": {
+    "socket.io": "^4.7.2"
+  }
+}
